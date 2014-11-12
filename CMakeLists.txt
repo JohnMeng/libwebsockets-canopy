@@ -404,7 +404,7 @@ endif(WIN32)
 # not "libwebsocket_shared".
 set_target_properties(websockets_shared
 		PROPERTIES 
-		OUTPUT_NAME websockets)
+		OUTPUT_NAME websockets-canopy)
 
 # Set the so version of the lib.
 # Equivalent to LDFLAGS=-version-info x:x:x
