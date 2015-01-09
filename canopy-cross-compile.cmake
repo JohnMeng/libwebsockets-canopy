@@ -6,14 +6,14 @@
 #  cmake .. -DCMAKE_TOOLCHAIN_FILE=../canopy-cross-compile.cmake
 #
 
-set(CROSS_PATH "/usr/arm-linux-gnueabi")
+set(CROSS_PATH $ENV{CANOPY_CROSS_PATH})
 
 # Target operating system name.
 set(CMAKE_SYSTEM_NAME Linux)
 
 # Name of C compiler.
-set(CMAKE_C_COMPILER "/usr/bin/arm-linux-gnueabi-gcc")
-set(CMAKE_CXX_COMPILER "/usr/bin/arm-linux-gnueabi-g++")
+set(CMAKE_C_COMPILER $ENV{CC})
+set(CMAKE_CXX_COMPILER $ENV{CXX})
 
 # Where to look for the target environment. (More paths can be added here)
 set(CMAKE_FIND_ROOT_PATH "${CROSS_PATH}")
